@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud SaaS Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fa;
+        }
+
+        header {
+            background: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #004d99;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #004d99;
+        }
+
+        footer {
+            background: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cloud Hosted SaaS Application</h1>
+    <p>Designed with Cloud-Native Technologies</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Dashboard</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Welcome</h2>
+        <p>
+            This is a sample Software as a Service (SaaS) application hosted
+            in the cloud. It demonstrates cloud deployment, CI/CD automation,
+            scalability, and monitoring.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Cloud Features</h2>
+        <ul>
+            <li>Cloud Hosting</li>
+            <li>Docker Containers</li>
+            <li>Kubernetes Deployment</li>
+            <li>CI/CD Pipeline</li>
+            <li>Secure Authentication</li>
+            <li>Performance Monitoring</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>System Status</h2>
+        <p><strong>Status:</strong> Running</p>
+        <p><strong>Environment:</strong> Production</p>
+        <button onclick="showMessage()">Check Service</button>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Cloud SaaS Application. All Rights Reserved.</p>
+</footer>
+
+<script>
+function showMessage() {
+    alert("Cloud SaaS Application is running successfully!");
+}
+</script>
+
+</body>
+</html>
