@@ -1,15 +1,15 @@
-from flask import Flask, jsonify
-import datetime
+from flask import Flask, render_template
+import os
 
-app = Flask(__name__)
+# Initialize the Flask application
+application = Flask(__name__, template_folder='.')
 
-@app.route("/")
+@application.route('/')
 def home():
-    return jsonify({
-        "message": "SaaS App is running!",
-        "time": str(datetime.datetime.now())
-    })
+    # Serves the index.html file to the visitor
+    return render_template('index.html')
 
-@app.route("/health")
-def health():
-    return jsonify({"status": "ok"}), 200
+if __name__ == '__main__':
+    # Binds the application to port 80 to make it publicly accessible on your VM
+    port = int(os.environ.get('PORT', 80))
+    application.run(host='0.0.0.0', port=port)
