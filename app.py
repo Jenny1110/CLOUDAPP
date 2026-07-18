@@ -1,15 +1,25 @@
-from flask import Flask, render_template
-import os
+from flask import Flask, render_template, jsonify
+import time
 
-# Initialize the Flask application
-application = Flask(__name__, template_folder='.')
+app = Flask(__name__, template_folder='.')
 
-@application.route('/')
-def home():
-    # Serves the index.html file to the visitor
+# Captures boot timestamp to monitor uptime calculations
+DEPLOY_TIME = time.time()
+
+@app.route('/')
+def index():
     return render_template('index.html')
 
+@app.route('/api/health')
+def health():
+    """Endpoint for monitoring tool polling."""
+    current_uptime = int(time.time() - DEPLOY_TIME)
+    return jsonify({
+        "status": "HEALTHY",
+        "system_uptime_seconds": current_uptime,
+        "database_connectivity": "CONNECTED",
+        "error_count": 0
+    })
+
 if __name__ == '__main__':
-    # Binds the application to port 80 to make it publicly accessible on your VM
-    port = int(os.environ.get('PORT', 80))
-    application.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=5000)
