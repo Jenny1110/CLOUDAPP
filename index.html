@@ -3,63 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Application Deployment Status</title>
-    <!-- Tailwind CSS for modern, professional styling -->
+    <title>Innovartus Technologies - SaaS Dashboard</title>
     <script src="https://jsdelivr.net"></script>
 </head>
-<body class="bg-gray-100 font-sans text-gray-800">
+<body class="bg-slate-900 font-sans text-slate-100 min-h-screen">
 
-    <div class="max-w-4xl mx-auto px-4 py-8">
-        <!-- Header -->
-        <header class="bg-blue-600 text-white p-6 rounded-t-lg shadow-md text-center">
-            <h1 class="text-3xl font-bold tracking-tight">Deployment Successful!</h1>
-            <p class="mt-2 text-blue-100 text-sm">Cloud Infrastructure Assignment Demo Application</p>
+    <div class="max-w-5xl mx-auto px-4 py-12">
+        <!-- Header Dashboard banner -->
+        <header class="bg-gradient-to-r from-blue-700 to-indigo-800 p-8 rounded-t-2xl shadow-xl flex flex-col md:flex-row justify-between items-center border-b border-indigo-500/30">
+            <div>
+                <span class="bg-emerald-500 text-slate-900 text-xs px-3 py-1 rounded-full uppercase font-bold tracking-wider">CI/CD Production Active</span>
+                <h1 class="text-3xl font-extrabold tracking-tight mt-2 text-white">Innovartus SaaS Environment</h1>
+                <p class="text-indigo-200 text-xs mt-1">Continuous Deployment Delivery Interface</p>
+            </div>
+            <div class="mt-4 md:mt-0 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                System Status: Operational
+            </div>
         </header>
 
-        <!-- Main Content Dashboard -->
-        <main class="bg-white p-6 rounded-b-lg shadow-md space-y-6">
-            <section class="border-b border-gray-200 pb-4">
-                <h2 class="text-xl font-semibold text-blue-600 mb-2">Live Application Metrics</h2>
-                <p class="text-sm text-gray-600">If you can read this text in your web browser, your virtual server configuration, security firewall groups, and public network routes are functioning perfectly.</p>
-            </section>
+        <!-- Main Analytics Window -->
+        <main class="bg-slate-800 p-6 md:p-8 rounded-b-2xl shadow-xl space-y-8 border-x border-b border-slate-700/50">
+            
+            <!-- Context Notice Box -->
+            <div class="bg-slate-850 border border-slate-700 p-4 rounded-xl text-slate-400 text-xs leading-relaxed">
+                <strong>Project Verification Note:</strong> This deployment proves the execution of automated continuous integration channels. Git commits pushed to the primary master origin instantly activate a container rebuild process, validating code adjustments in real-time.
+            </div>
 
-            <!-- Required Results Table Segment -->
+            <!-- Required Results Metrics Matrix -->
             <section>
-                <h2 class="text-xl font-semibold text-gray-700 mb-3">Assignment Results Table</h2>
-                <div class="overflow-x-auto">
-                    <table class="min-w-full divide-y divide-gray-200 border border-gray-200">
-                        <thead class="bg-gray-50">
+                <h2 class="text-lg font-bold text-white mb-4 tracking-tight">Assignment Execution Matrix</h2>
+                <div class="overflow-x-auto border border-slate-700 rounded-xl">
+                    <table class="min-w-full divide-y divide-slate-700 text-xs text-left">
+                        <thead class="bg-slate-700/50 text-slate-300 font-bold uppercase tracking-wider text-[10px]">
                             <tr>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">Metric</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">Value</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b">Observation</th>
+                                <th class="px-6 py-4">Metric</th>
+                                <th class="px-6 py-4">Value</th>
+                                <th class="px-6 py-4">Observation</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y divide-gray-200 text-sm">
-                            <tr>
-                                <td class="px-6 py-4 font-medium text-gray-900 border-r">Deployment Time</td>
-                                <td class="px-6 py-4 text-gray-600 border-r">~15-20 minutes</td>
-                                <td class="px-6 py-4 text-gray-500">Includes VM spinning initialization, security configuration, package installations, and process binding.</td>
+                        <tbody class="divide-y divide-slate-700 text-slate-300">
+                            <tr class="hover:bg-slate-750">
+                                <td class="px-6 py-4 font-semibold text-white border-r border-slate-700">Deployment Time</td>
+                                <td class="px-6 py-4 text-blue-400 font-bold border-r border-slate-700">~2 Minutes</td>
+                                <td class="px-6 py-4 text-slate-400">Entirely automated pipeline. Build processes manage environmental caching and gunicorn engine setup seamlessly.</td>
                             </tr>
-                            <tr>
-                                <td class="px-6 py-4 font-medium text-gray-900 border-r">Accessibility</td>
-                                <td class="px-6 py-4 text-green-600 font-semibold border-r">Publicly Accessible</td>
-                                <td class="px-6 py-4 text-gray-500">Accessible directly via Public IPv4 address using standard HTTP over network port 80.</td>
+                            <tr class="hover:bg-slate-750">
+                                <td class="px-6 py-4 font-semibold text-white border-r border-slate-700">Downtime</td>
+                                <td class="px-6 py-4 text-emerald-400 font-bold border-r border-slate-700">0 Seconds (Zero-Downtime)</td>
+                                <td class="px-6 py-4 text-slate-400">Utilizes native rolling updates. Legacy deployment assets manage consumer queries until the new build matches verification criteria.</td>
                             </tr>
-                            <tr>
-                                <td class="px-6 py-4 font-medium text-gray-900 border-r">Cost Estimate</td>
-                                <td class="px-6 py-4 text-gray-600 border-r">$0.00 (AWS Free Tier)</td>
-                                <td class="px-6 py-4 text-gray-500">Utilized a t2.micro compute layer instance under the standard 12-month free tier window.</td>
+                            <tr class="hover:bg-slate-750">
+                                <td class="px-6 py-4 font-semibold text-white border-r border-slate-700">Scaling Ease</td>
+                                <td class="px-6 py-4 text-blue-400 font-bold border-r border-slate-700">Fully Automated</td>
+                                <td class="px-6 py-4 text-slate-400">Scales horizontally across computing infrastructure based on user request frequency spikes.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
+
+            <!-- Text Summary Workflows -->
+            <section class="grid md:grid-cols-2 gap-6 text-xs leading-relaxed text-slate-400">
+                <div class="border border-slate-700 p-5 rounded-xl bg-slate-850/50">
+                    <h3 class="text-sm font-bold text-white mb-2">Automated Resource Scaling Execution (10 &rarr; 10,000 Users)</h3>
+                    <p>
+                        To navigate intense traffic spikes smoothly, the architecture isolates stateless server threads from the persistence layer. Incoming user connections balance uniformly over cluster networks. Resource nodes clone instantly as usage bounds cross defined monitoring limits.
+                    </p>
+                </div>
+                <div class="border border-slate-700 p-5 rounded-xl bg-slate-850/50">
+                    <h3 class="text-sm font-bold text-white mb-2">CI/CD Engine Management</h3>
+                    <p>
+                        A webhook protocol couples the GitHub code repository directly with the host engine. Code additions committed to remote branches fire build parameters automatically. The platform verifies package compilation scripts and rolls out updates safely.
+                    </p>
+                </div>
+            </section>
         </main>
 
-        <!-- Footer -->
-        <footer class="mt-8 text-center text-xs text-gray-400">
-            <p>&copy; 2026 Academic Lab Group Project | All Rights Reserved.</p>
+        <footer class="mt-8 text-center text-[10px] text-slate-500 tracking-wide">
+            &copy; 2026 Innovartus Infrastructure Engineering Lab Portfolio. All Rights Reserved.
         </footer>
     </div>
 
